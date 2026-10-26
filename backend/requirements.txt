@@ -1,0 +1,16 @@
+# ReviewIQ backend — Python 3.10 to 3.14 (tested with 3.13). Newer Python versions may lack
+# pre-built packages and then need a C++ compiler; use Python 3.13 if pip tries to build anything.
+fastapi>=0.110
+uvicorn>=0.29          # plain uvicorn: no optional C extensions to compile
+python-multipart>=0.0.9
+pydantic>=2.6
+pymongo>=4.6
+mongomock>=4.1        # in-memory demo store and tests (not used when MongoDB is running)
+pandas>=2.1
+numpy>=1.26
+scikit-learn>=1.4
+joblib>=1.3
+python-dotenv>=1.0
+# testing
+pytest>=8.0
+httpx>=0.27

@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+*.egg-info/
+
+# Node
+node_modules/
+frontend/dist/
+
+# Environment / secrets
+.env
+backend/.env
+frontend/.env
+!.env.example
+
+# Uploaded user data (sample data is kept)
+data/uploads/*
+!data/uploads/.gitkeep
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

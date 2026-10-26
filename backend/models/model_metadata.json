@@ -1,0 +1,484 @@
+{
+  "run_id": "71c115d8c3bc",
+  "trained_at": "2026-10-14T16:06:20.304023+00:00",
+  "sklearn_version": "1.9.1",
+  "params": {
+    "test_size": 0.2,
+    "random_state": 42,
+    "include_title": true,
+    "deduplicate": true,
+    "balance_classes": true,
+    "max_features": 20000,
+    "ngram_max": 2,
+    "lr_C": 1.0,
+    "nb_alpha": 0.1,
+    "cv_folds": 5,
+    "dataset_id": null
+  },
+  "labels": [
+    "negative",
+    "neutral",
+    "positive"
+  ],
+  "best_model": "naive_bayes",
+  "selection_metric": "cv_f1_macro_mean",
+  "data": {
+    "reviews_in_scope": 997,
+    "labeled_reviews": 997,
+    "excluded_unlabeled": 0,
+    "label_sources": {
+      "dataset_column": 997
+    },
+    "rating_rule": {
+      "negative": "rating <= 2",
+      "neutral": "2 < rating < 4",
+      "positive": "rating >= 4",
+      "valid_range": "1-5",
+      "note": "Rating-derived labels are a proxy for sentiment, not independently verified annotations."
+    },
+    "dataset_id": null,
+    "used_for_training": 909,
+    "dropped_empty_after_cleaning": 0,
+    "dropped_duplicate_texts": 88,
+    "duplicate_texts_with_conflicting_labels": 0,
+    "class_distribution": {
+      "negative": 72,
+      "neutral": 70,
+      "positive": 767
+    },
+    "train_size": 727,
+    "test_size": 182,
+    "test_class_distribution": {
+      "negative": 14,
+      "neutral": 14,
+      "positive": 154
+    },
+    "vocabulary_size": 7025,
+    "tfidf_min_df": 2
+  },
+  "baseline": {
+    "strategy": "always predict 'positive'",
+    "accuracy": 0.8462,
+    "f1_macro": 0.3056
+  },
+  "results": {
+    "logistic_regression": {
+      "name": "Logistic Regression",
+      "accuracy": 0.8516,
+      "precision_macro": 0.6129,
+      "recall_macro": 0.6169,
+      "f1_macro": 0.6133,
+      "precision_weighted": 0.8507,
+      "recall_weighted": 0.8516,
+      "f1_weighted": 0.8508,
+      "per_class": {
+        "negative": {
+          "precision": 0.5,
+          "recall": 0.5714,
+          "f1": 0.5333,
+          "support": 14
+        },
+        "neutral": {
+          "precision": 0.4167,
+          "recall": 0.3571,
+          "f1": 0.3846,
+          "support": 14
+        },
+        "positive": {
+          "precision": 0.9221,
+          "recall": 0.9221,
+          "f1": 0.9221,
+          "support": 154
+        }
+      },
+      "confusion_matrix": {
+        "labels": [
+          "negative",
+          "neutral",
+          "positive"
+        ],
+        "matrix": [
+          [
+            8,
+            2,
+            4
+          ],
+          [
+            1,
+            5,
+            8
+          ],
+          [
+            7,
+            5,
+            142
+          ]
+        ]
+      },
+      "top_features": {
+        "negative": [
+          {
+            "term": "not",
+            "weight": 1.3617
+          },
+          {
+            "term": "horrible",
+            "weight": 1.1417
+          },
+          {
+            "term": "netflix",
+            "weight": 1.0461
+          },
+          {
+            "term": "remote",
+            "weight": 1.0368
+          },
+          {
+            "term": "return",
+            "weight": 0.956
+          },
+          {
+            "term": "not work",
+            "weight": 0.9376
+          },
+          {
+            "term": "waste",
+            "weight": 0.8602
+          },
+          {
+            "term": "months",
+            "weight": 0.8435
+          },
+          {
+            "term": "thought",
+            "weight": 0.8094
+          },
+          {
+            "term": "stopped working",
+            "weight": 0.7779
+          },
+          {
+            "term": "stars",
+            "weight": 0.7756
+          },
+          {
+            "term": "stars very",
+            "weight": 0.7567
+          }
+        ],
+        "neutral": [
+          {
+            "term": "ok",
+            "weight": 1.4975
+          },
+          {
+            "term": "love but",
+            "weight": 1.1862
+          },
+          {
+            "term": "but",
+            "weight": 0.9457
+          },
+          {
+            "term": "ok product",
+            "weight": 0.9347
+          },
+          {
+            "term": "need",
+            "weight": 0.9081
+          },
+          {
+            "term": "does",
+            "weight": 0.8515
+          },
+          {
+            "term": "better",
+            "weight": 0.8505
+          },
+          {
+            "term": "told",
+            "weight": 0.8117
+          },
+          {
+            "term": "answer",
+            "weight": 0.7845
+          },
+          {
+            "term": "original cover",
+            "weight": 0.7738
+          },
+          {
+            "term": "speaker nice",
+            "weight": 0.768
+          },
+          {
+            "term": "not",
+            "weight": 0.744
+          }
+        ],
+        "positive": [
+          {
+            "term": "great",
+            "weight": 1.7059
+          },
+          {
+            "term": "love",
+            "weight": 1.0594
+          },
+          {
+            "term": "alexa",
+            "weight": 1.0492
+          },
+          {
+            "term": "tap",
+            "weight": 0.8983
+          },
+          {
+            "term": "echo",
+            "weight": 0.8227
+          },
+          {
+            "term": "perfect",
+            "weight": 0.8182
+          },
+          {
+            "term": "awesome",
+            "weight": 0.6762
+          },
+          {
+            "term": "music",
+            "weight": 0.6748
+          },
+          {
+            "term": "excellent",
+            "weight": 0.6726
+          },
+          {
+            "term": "amazon tap",
+            "weight": 0.6179
+          },
+          {
+            "term": "loves",
+            "weight": 0.6111
+          },
+          {
+            "term": "best",
+            "weight": 0.5355
+          }
+        ]
+      },
+      "cv_f1_macro_mean": 0.4524,
+      "cv_f1_macro_std": 0.0318,
+      "cv_folds": 5
+    },
+    "naive_bayes": {
+      "name": "Multinomial Naive Bayes",
+      "accuracy": 0.8187,
+      "precision_macro": 0.5489,
+      "recall_macro": 0.6039,
+      "f1_macro": 0.5714,
+      "precision_weighted": 0.8432,
+      "recall_weighted": 0.8187,
+      "f1_weighted": 0.8293,
+      "per_class": {
+        "negative": {
+          "precision": 0.4211,
+          "recall": 0.5714,
+          "f1": 0.4848,
+          "support": 14
+        },
+        "neutral": {
+          "precision": 0.2941,
+          "recall": 0.3571,
+          "f1": 0.3226,
+          "support": 14
+        },
+        "positive": {
+          "precision": 0.9315,
+          "recall": 0.8831,
+          "f1": 0.9067,
+          "support": 154
+        }
+      },
+      "confusion_matrix": {
+        "labels": [
+          "negative",
+          "neutral",
+          "positive"
+        ],
+        "matrix": [
+          [
+            8,
+            3,
+            3
+          ],
+          [
+            2,
+            5,
+            7
+          ],
+          [
+            9,
+            9,
+            136
+          ]
+        ]
+      },
+      "top_features": {
+        "negative": [
+          {
+            "term": "stopped working",
+            "weight": 3.724
+          },
+          {
+            "term": "return",
+            "weight": 3.665
+          },
+          {
+            "term": "horrible",
+            "weight": 3.6565
+          },
+          {
+            "term": "waste",
+            "weight": 3.4435
+          },
+          {
+            "term": "lasted",
+            "weight": 3.3819
+          },
+          {
+            "term": "not worth",
+            "weight": 3.2225
+          },
+          {
+            "term": "cellphone",
+            "weight": 3.1925
+          },
+          {
+            "term": "twice",
+            "weight": 3.142
+          },
+          {
+            "term": "refund",
+            "weight": 3.1284
+          },
+          {
+            "term": "working not",
+            "weight": 3.1207
+          },
+          {
+            "term": "stars very",
+            "weight": 3.1166
+          },
+          {
+            "term": "most questions",
+            "weight": 3.0886
+          }
+        ],
+        "neutral": [
+          {
+            "term": "ok product",
+            "weight": 3.6343
+          },
+          {
+            "term": "original cover",
+            "weight": 3.2203
+          },
+          {
+            "term": "speaker nice",
+            "weight": 3.1764
+          },
+          {
+            "term": "love but",
+            "weight": 3.133
+          },
+          {
+            "term": "ok",
+            "weight": 3.1155
+          },
+          {
+            "term": "told",
+            "weight": 3.0221
+          },
+          {
+            "term": "slower",
+            "weight": 3.0127
+          },
+          {
+            "term": "dog",
+            "weight": 3.0119
+          },
+          {
+            "term": "responding",
+            "weight": 2.975
+          },
+          {
+            "term": "ok not",
+            "weight": 2.904
+          },
+          {
+            "term": "commercial",
+            "weight": 2.8955
+          },
+          {
+            "term": "tap fine",
+            "weight": 2.8533
+          }
+        ],
+        "positive": [
+          {
+            "term": "loves",
+            "weight": 3.2156
+          },
+          {
+            "term": "outside",
+            "weight": 2.8337
+          },
+          {
+            "term": "play music",
+            "weight": 2.7544
+          },
+          {
+            "term": "perfect",
+            "weight": 2.7527
+          },
+          {
+            "term": "weather",
+            "weight": 2.7144
+          },
+          {
+            "term": "cool",
+            "weight": 2.6527
+          },
+          {
+            "term": "unit",
+            "weight": 2.5782
+          },
+          {
+            "term": "amazon tap",
+            "weight": 2.5703
+          },
+          {
+            "term": "loud",
+            "weight": 2.5628
+          },
+          {
+            "term": "glad",
+            "weight": 2.5216
+          },
+          {
+            "term": "news",
+            "weight": 2.5186
+          },
+          {
+            "term": "little speaker",
+            "weight": 2.5004
+          }
+        ]
+      },
+      "cv_f1_macro_mean": 0.5195,
+      "cv_f1_macro_std": 0.0436,
+      "cv_folds": 5
+    }
+  }
+}
